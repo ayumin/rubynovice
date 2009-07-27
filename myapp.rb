@@ -6,7 +6,7 @@ require 'erb'
 
 configure :development do
   ActiveRecord::Base.establish_connection(
-    :adapter => 'sqlite3'
+    :adapter => 'sqlite3',
     :dbfile => 'db/development.sqlite3'
   )
 end
