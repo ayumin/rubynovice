@@ -15,7 +15,7 @@ get '/' do
   @contacts = Contact.all
   unless params[:key] == ""
     regex = /#{params[:key]}/
-    @contacts.select! do |c|
+    @contacts.select do |c|
       c =~ regex
     end
   end
