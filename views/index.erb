@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h1>Contact List</h1>
+    <form id="search" action="./" method="get">
+      <input id="key" name="key" type="text" value="<%=params[:key]%>" />
+      <input id="search" name="search" type="submit" value="serach" />
+    </form>
+    <hr />
+    <% @contacts.each do |c| %>
+      <a href="mailto:<%=c.mail%>"><%=c.name%></a><br />
+    <% end %>
+  </body>
+</html>
+
