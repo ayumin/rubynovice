@@ -3,11 +3,12 @@
     <h1>Contact List</h1>
     <form id="search" action="./" method="get">
       <input id="key" name="key" type="text" value="<%=params[:key]%>" />
-      <input id="search" name="search" type="submit" value="serach" />
+      <input id="search" type="submit" value="serach" />
     </form>
     <hr />
+    <a href="./new">[new contact]</a><br />
     <% @contacts.each do |c| %>
-      <a href="mailto:<%=c.mail%>"><%=c.name%></a><br />
+      <a href="mailto:<%=c.email%>"><%=c.name%></a>&nbsp;<a href="./<%=c.id%>">[edit]</a><br />
     <% end %>
   </body>
 </html>
