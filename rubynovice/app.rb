@@ -28,6 +28,9 @@ end
 get '/new' do
   erb :new
 end
+get '/about' do
+  "I'm running version " + Sinatra::VERSION
+end
 get '/:id' do
   @contact = Contact.find(params[:id])
   erb :show
@@ -56,7 +59,4 @@ post '/:id' do
   c.save
   @contacts = Contact.all
   erb :index
-end
-get '/about' do
-  "I'm running version " + Sinatra::VERSION
 end
